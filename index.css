@@ -1,0 +1,207 @@
+:root {
+    --bg-color: rgb(2, 3, 19);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    color: white;
+    height: 60px;
+
+    font-size: 16px;
+}
+
+.container {
+    padding: 0 170px;
+}
+
+.header-logo {
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    position: relative;
+    background-image: url('/images/g&g-hero.webp');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
+}
+
+.hero .hero-content {
+    position: absolute;
+    color: rgb(230, 230, 230);
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hero-content p {
+    font-size: 11px;
+}
+
+.accent_text {
+    color: aqua;
+    font-weight: bold;
+}
+
+#order {
+    align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 221, 0);
+    box-shadow:
+        0 0 10px rgba(255, 242, 204, 0.8),
+        0 0 20px rgba(255, 249, 203, 0.6),
+        0 0 25px rgba(255, 251, 210, 0.4)
+}
+
+.concerts {
+    margin: 50px 0 100px 0;
+}
+
+.concerts-section {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.concerts__title {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 24px 30px;
+    background:  #1B1E29;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top: 1px solid #1f2937;
+    border-right: 1px solid #1f2937;
+    border-left: 1px solid #1f2937;
+}
+
+.concerts__table {
+    border: 1px solid #1f2937;
+    width: 100%;
+    border-collapse: collapse;
+    background: #141C25;
+}
+
+.concerts__table thead {
+    background: #1B1E29;
+}
+
+.concerts__table th {
+    text-align: left;
+    font-weight: 600;
+    padding: 18px 30px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.concerts__table td {
+    padding: 22px 30px;
+    border-top: 1px solid #1f2937;
+    font-size: 16px;
+}
+
+.concerts__table tbody tr:hover {
+    background: #151b2a;
+}
+
+.ticket-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #f43f5e;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all .25s ease;
+}
+
+.ticket-btn:hover {
+    background: #e11d48;
+    transform: translateY(-2px);
+}
+
+.team > .container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.team-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    align-self: center;
+}
+
+.team ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.team ul li img{
+    width: 300px;
+    height: 300px;
+}
+
+.team ul li {
+    border: 1px solid #1f2937;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #141C25;
+}
+
+.team ul li p{
+    margin: 15px 0 15px 20px;
+}
