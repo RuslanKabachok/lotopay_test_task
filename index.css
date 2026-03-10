@@ -7,11 +7,6 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-color);
-}
-
 .header-container {
     display: flex;
     flex-direction: row;
@@ -74,7 +69,7 @@ nav ul li a {
 }
 
 .hero-content p {
-    font-size: 11px;
+    font-size: 15px;
 }
 
 .accent_text {
@@ -86,16 +81,13 @@ nav ul li a {
     align-self: flex-start;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
-    padding: 11px 16px;
+    padding: 15px 25px;
     border: none;
     border-radius: 5px;
     background-color: rgb(255, 221, 0);
-    box-shadow:
-        0 0 10px rgba(255, 242, 204, 0.8),
-        0 0 20px rgba(255, 249, 203, 0.6),
-        0 0 25px rgba(255, 251, 210, 0.4)
+    box-shadow: 0 0 10px rgba(255, 242, 204, 0.8), 0 0 20px rgba(255, 249, 203, 0.6), 0 0 25px rgba(255, 251, 210, 0.4);
 }
 
 .concerts {
@@ -135,15 +127,11 @@ nav ul li a {
 .concerts__table th {
     text-align: left;
     font-weight: 600;
-    padding: 18px 30px;
     color: #9ca3af;
-    font-size: 14px;
 }
 
 .concerts__table td {
-    padding: 22px 30px;
     border-top: 1px solid #1f2937;
-    font-size: 16px;
 }
 
 .concerts__table tbody tr:hover {
@@ -178,14 +166,12 @@ nav ul li a {
 .team-title {
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 50px;
     align-self: center;
 }
 
 .team ul {
     display: flex;
     flex-direction: row;
-    gap: 55px;
     justify-content: space-around;
     list-style: none;
 }
@@ -211,14 +197,12 @@ nav ul li a {
 
 .history {
     color: white;
-    background: linear-gradient(
-        145deg,
-        #142739 0%,
-        #132b3a 25%,
-        #1b1f2e 55%,
-        #2a1320 75%,
-        #301016 100%
-    );
+    background: linear-gradient(145deg,
+            #142739 0%,
+            #132b3a 25%,
+            #1b1f2e 55%,
+            #2a1320 75%,
+            #301016 100%);
 
     padding-top: 50px;
     padding-bottom: 50px;
@@ -227,7 +211,6 @@ nav ul li a {
 .history-content {
     display: flex;
     flex-direction: row;
-    gap: 40px;
     align-items: flex-start;
 }
 
@@ -242,8 +225,8 @@ nav ul li a {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px;
     line-height: 1.5;
+    font-size: 14px;
 }
 
 .history-image {
@@ -271,16 +254,15 @@ nav ul li a {
     display: block;
     border: 1px solid #1f2937;
 }
+
 .contact {
     color: white;
-    background: linear-gradient(
-        145deg,
-        #301016 0%,
-        #2a1320 25%,
-        #1b1f2e 55%,
-        #132b3a 75%,
-        #142739 100%
-    );
+    background: linear-gradient(145deg,
+            #301016 0%,
+            #2a1320 25%,
+            #1b1f2e 55%,
+            #132b3a 75%,
+            #142739 100%);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -293,7 +275,7 @@ nav ul li a {
 
 .contact-title p {
     text-align: center;
-    color: #bfc6cf;
+    color: #9ea1a6;
     margin-bottom: 50px;
 }
 
@@ -311,7 +293,6 @@ nav ul li a {
 .contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
 }
 
 .contact-form__data {
@@ -322,7 +303,6 @@ nav ul li a {
 .contact-form__data label {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
     color: #c3c3c3;
     flex: 1;
 }
@@ -336,16 +316,10 @@ nav ul li a {
 
 .contact-form input,
 .contact-form textarea {
-    margin-top: 8px;
-    padding: 14px 16px;
-
     background: #0f172a;
     border: 1px solid #1f2937;
     border-radius: 8px;
-
     color: white;
-    font-size: 14px;
-
     outline: none;
     transition: all .25s ease;
 }
@@ -361,9 +335,6 @@ nav ul li a {
 }
 
 .contact-form button {
-    width: 150px;
-    padding: 12px 20px;
-
     border: none;
     border-radius: 10px;
 
@@ -386,8 +357,6 @@ nav ul li a {
     background: #0f172a;
     border: 1px solid #1f2937;
     border-radius: 12px;
-
-    padding: 15px;
 }
 
 .contact-map iframe {
@@ -396,13 +365,13 @@ nav ul li a {
     border-radius: 8px;
 }
 
-.contact-map h3{
-    margin-bottom:20px;
-    font-size:16px;
+.contact-map h3 {
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .footer {
-    color:#9ca3af;
+    color: #9ca3af;
     border-top: 1px solid #1f2937;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -413,7 +382,6 @@ nav ul li a {
 .footer-contacts {
     display: flex;
     flex-direction: column;
-    gap: 45px;
 }
 
 .footer-socials ul {
@@ -424,7 +392,290 @@ nav ul li a {
     align-items: center;
 }
 
-.footer-contacts__data a, .footer-socials a {
+.footer-contacts__data a {
     text-decoration: none;
-    color: white;
+    color: rgb(218, 218, 218);
+}
+
+.footer-socials a {
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .header-logo {
+        font-size: 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    #order {
+        letter-spacing: unset;
+        font-size: 15px;
+    }
+
+    .concerts {
+        margin: 50px 0;
+    }
+
+    .concerts__table th {
+        font-size: 15px;
+        padding: 18px 10px;
+    }
+
+    .concerts__table td {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+
+    .team-title {
+        margin-bottom: 35px;
+    }
+
+    .team ul {
+        gap: 20px;
+    }
+
+    .team ul li img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .team ul li p {
+        font-size: 14px;
+    }
+
+    .history {
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .history-content {
+        flex-direction: column;
+    }
+
+    .history-description p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .history-image {
+        display: none;
+    }
+
+    .contact {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .contact-form form {
+        gap: 10px
+    }
+
+    .contact-form__data {
+        gap: 10px;
+    }
+
+    .contact-form__data label,
+    .contact-form__message label {
+        font-size: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        margin-top: 5px;
+        padding: 7px 5px;
+        font-size: 12px;
+    }
+
+    .contact-form button {
+        width: 120px;
+        padding: 10px 0;
+        font-size: 12px;
+        letter-spacing: 0.7px;
+    }
+
+    .contact-map {
+        padding: 12px;
+    }
+
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-contacts {
+        gap: 30px;
+        font-size: 13px;
+    }
+
+    .footer-socials a {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .container {
+        padding: 0 110px;
+    }
+
+    .header-logo {
+        font-size: 20px;
+    }
+
+    .concerts__table td {
+        font-size: 15px;
+        padding: 22px 30px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .concerts {
+        margin: 50px 0 100px 0;
+    }
+
+    .concerts__table th {
+        font-size: 16px;
+        padding: 18px 30px;
+    }
+
+    .team-title {
+        margin-bottom: 50px;
+    }
+
+    .team ul {
+        gap: 40px;
+    }
+
+    .team ul li img {
+        width: 280px;
+        height: 240px;
+    }
+
+    .team ul li p {
+        font-size: 16px;
+    }
+
+    .history {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .history-content {
+        margin-bottom: 15px;
+        flex-direction: row;
+    }
+
+    .history-image {
+        display: block;
+        width: 360px;
+        height: 223px;
+    }
+
+    .history-description {
+        gap: 15px;
+    }
+
+    .history-description p {
+        font-size: 14px;
+        line-height: unset;
+    }
+
+    .contact {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .contact-form form {
+        gap: 25px;
+    }
+
+    .contact-form__data {
+        gap: 20px;
+    }
+
+    .contact-form__data label, .contact-form__message label {
+        font-size: 14px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        margin-top: 8px;
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        width: 150px;
+    padding: 12px 20px;
+            font-size: 14px;
+    }
+
+    .contact-map {
+        padding: 15px;
+    }
+
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-contacts {
+        gap: 45px;
+        font-size: 16px;
+    }
+
+    .footer-socials a {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 0 170px;
+    }
+
+    .team ul {
+        gap: 55px;
+    }
+
+    .team ul li img {
+       width: 300px;
+    height: 250px; 
+    }
+
+    .team ul li p {
+        font-size: 18px;
+    }
+
+    .history-description {gap: 25px;}
 }
