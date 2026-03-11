@@ -130,21 +130,22 @@
         </div>
         <div class="contact-data">
             <div class="contact-form">
-                <form>
+                <form id="contactForm" method="GET">
                     <div class="contact-form__data">
                         <label for="name">Імʼя
-                            <input type="text" id="name" name="name">
+                            <input type="text" id="name" name="name" required minlength="2">
                         </label>
                         <label for="email">Email
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required>
                         </label>
                     </div>
                     <div class="contact-form__message">
                         <label for="message"> Повідомлення
-                            <textarea name="message" id="message" placeholder="Розкажи про свої ідеї..."></textarea>
+                            <textarea name="message" id="message" required minlength="10"
+                                placeholder="Розкажи про свої ідеї..."></textarea>
                         </label>
                     </div>
-                    <button>Відправити</button>
+                    <button type="submit">Відправити</button>
                 </form>
             </div>
             <div class="contact-map">
