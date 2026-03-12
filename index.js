@@ -1,20 +1,32 @@
 const form = document.querySelector("#contactForm");
+const popup = document.querySelector("#popup");
+const closePopupBtn = document.querySelector("#closePopup");
 
-form.addEventListener("submit", function (e) {
+const openPopup = () => popup.classList.add("active");
+const closePopup = () => popup.classList.remove("active");
 
-    const name = document.querySelector("#name").value.trim();
-    const message = document.querySelector("#message").value.trim();
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    if (name.length < 2) {
-        alert("Імʼя повинно містити мінімум 2 символи");
+    const params = new URLSearchParams(new FormData(form));
+    await fetch(`/?${params}`);
+
+    alert("Форма успішно відправлена!");
+    form.reset();
+});
+
+document.querySelectorAll(".ticket-btn, #order")
+    .forEach(btn => btn.addEventListener("click", (e) => {
         e.preventDefault();
-        return;
-    }
+        openPopup();
+    }));
 
-    if (message.length < 10) {
-        alert("Повідомлення повинно бути довше");
-        e.preventDefault();
-        return;
-    }
+closePopupBtn.addEventListener("click", closePopup);
 
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closePopup();
+});
+
+popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
 });

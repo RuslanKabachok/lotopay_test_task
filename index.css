@@ -2,6 +2,10 @@
     --bg-color: rgb(6 6 13);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -88,6 +92,7 @@ nav ul li a {
     border-radius: 5px;
     background-color: rgb(255, 221, 0);
     box-shadow: 0 0 10px rgba(255, 242, 204, 0.8), 0 0 20px rgba(255, 249, 203, 0.6), 0 0 25px rgba(255, 251, 210, 0.4);
+    cursor: pointer;
 }
 
 .concerts {
@@ -181,6 +186,7 @@ nav ul li a {
     height: 250px;
     object-fit: cover;
     object-position: top;
+    transition: transform .35s ease;
 }
 
 .team ul li {
@@ -188,11 +194,29 @@ nav ul li a {
     border-radius: 15px;
     overflow: hidden;
     background: #141C25;
+
+    transition: all .35s ease;
+    cursor: pointer;
 }
 
 .team ul li p {
     margin: 15px 0 15px 20px;
     color: #9ca3af;
+    transition: transform .35s ease;
+}
+
+.team ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border-color: #f43f5e;
+}
+
+.team ul li:hover img {
+    transform: scale(1.08);
+}
+
+.team ul li:hover p {
+    color: white;
 }
 
 .history {
@@ -214,7 +238,7 @@ nav ul li a {
     align-items: flex-start;
 }
 
-.histoty-title {
+.history-title {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 35px;
@@ -455,74 +479,76 @@ body {
         margin: 50px 0;
     }
 
-        .team-title {
+    .team-title {
         margin-bottom: 30px;
     }
 
     .team ul {
-    flex-direction: column;
-    gap: 30px;
-}
+        flex-direction: column;
+        gap: 30px;
+    }
 
     .history {
         padding-bottom: 30px;
         padding-top: 30px;
     }
 
-        .contact {
+    .contact {
         padding-top: 30px;
         padding-bottom: 30px;
     }
 
 
     .contact-data {
-flex-direction: column;
-align-items: center;
-    gap: 50px;
-}
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
 
     .contact-form form {
         gap: 25px;
     }
 
-   .contact-form__data {
-            display: flex;
+    .contact-form__data {
+        display: flex;
         gap: 30px;
         flex-direction: column;
-}
+    }
 
-    .contact-form__data label, .contact-form__message label {
+    .contact-form__data label,
+    .contact-form__message label {
         font-size: 12px;
     }
 
-        .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
         margin-top: 5px;
         padding: 12px 115px;
         font-size: 12px;
     }
 
-        .contact-form button {
+    .contact-form button {
         padding: 12px 10px;
         font-size: 12px;
     }
 
-        .contact-map {
+    .contact-map {
         padding: 20px;
     }
 
     .footer {
         padding-top: 40px;
         padding-bottom: 40px;
-flex-direction: column;
+        flex-direction: column;
     }
 
-        .footer-contacts {
+    .footer-contacts {
         gap: 15px;
         font-size: 13px;
         margin-bottom: 15px;
     }
 
-        .footer-socials a {
+    .footer-socials a {
         font-size: 13px;
     }
 
@@ -869,4 +895,51 @@ flex-direction: column;
     .footer-socials a {
         font-size: 17px;
     }
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #111827;
+    padding: 70px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popup-content p {
+    font-size: 20px;
+}
+
+.popup-content button {
+    align-self: center;
+    cursor: pointer;
+    width: 150px;
+    padding: 10px 0;
+    background: #f43f5e;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    transition: all .25s ease;
+}
+
+.popup-content button:hover {
+    background: #e11d48;
+    transform: translateY(-2px);
 }
